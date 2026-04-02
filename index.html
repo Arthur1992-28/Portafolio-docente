@@ -198,6 +198,14 @@
     display: block;
     margin: 0 auto;
 }
+.doc video.vertical{
+    width: 200px;          /* más angosto */
+    height: 350px;         /* más alto */
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
 
 /* HOVER PRO */
 .doc:hover{
@@ -846,10 +854,9 @@ Asimismo, procuro explicar siempre el porqué y el cómo de cada técnica o cont
     <div class="galeria">
 
         <div class="doc">
-            <video controls>
-                <source src="imagenes/NOVENO.mp4" type="video/mp4">
-                Tu navegador no soporta video.
-            </video>
+            <video class="vertical" controls>
+    <source src="imagenes/NOVENO.mp4" type="video/mp4">
+</video>
             <p>🔌 Práctica eléctrica</p>
         </div>
 

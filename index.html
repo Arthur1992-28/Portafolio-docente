@@ -156,9 +156,11 @@
         0 0 120px #00f0ff;
 }
 .galeria{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+   display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
+    justify-items: center;
+    
 }
 
 
@@ -187,7 +189,15 @@
     margin-top: 8px;
     font-size: 14px;
 }
-
+.doc video{
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 16/9;  
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
 
 /* HOVER PRO */
 .doc:hover{
@@ -523,11 +533,7 @@ img{
     width: 100%;
     box-sizing: border-box;
 }
-.doc video{
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
-}
+
 @media (max-width: 1024px){
 
     .galeria{

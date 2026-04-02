@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portafolio Docente</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+    .perfil-grande{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.perfil-grande img{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 4px solid #00f0ff;
+    box-shadow:
+        0 0 15px #00f0ff,
+        0 0 30px #00f0ff,
+        0 0 60px #00f0ff;
+}
+    .portada-img img:hover {
+    transform: scale(1.05);
+}
+    
+    .portada-img img {
+    width: 320px;
+    height: 380px;
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 25px gold,
+        0 0 50px gold;
+
+    transition: 0.3s;
+}
+    .portada-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+   .portada-card:hover {
+    border: 1px solid #00ffff;
+
+    box-shadow:
+        0 0 20px #00ffff,
+        0 0 40px #00ffff;
+}
+        /* PORTADA */
+.portada-card {
+    background: linear-gradient(135deg, #0f172a, #1e3a5f);
+    border: 1px solid #00ffff;
+
+    box-shadow:
+        0 0 20px #00ffff,
+        0 0 40px rgba(0,255,255,0.5);
+
+    transition: 0.4s;
+}
+.portada {
+    background: #0f172a; /* 👈 mismo azul que usas */
+    padding: 60px;
+}
+
+
+/* IMAGEN GRANDE */
+.portada-img img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 20px gold,
+        0 0 40px gold;
+}
+/* INFO */
+.portada-info {
+    color: white;
+    max-width: 500px;
+}
+
+
+
+/* TITULO */
+.portada-info h2 {
+    color: #00ffff;
+    font-size: 26px;
+
+    text-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #00ffff;
+
+    margin-bottom: 20px;
+}
+
+
+/* LISTA */
+.lista-portada {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-portada li {
+    margin: 12px 0;
+    padding-left: 35px;
+    position: relative;
+}
+.lista-portada li::before {
+    content: "💻";
+    position: absolute;
+    left: 0;
+    color: #00ffff;
+
+    text-shadow: 0 0 10px #00ffff;
+}
+
+
+
+/* ICONO INFORMÁTICA */
+
+       
+   .logo-institucion{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+
+.logo-institucion img{
+    width: 400px;
+    max-width: 95%;
+    border: 3px solid #00f0ff;
+    box-shadow:
+        0 0 10px #00f0ff,
+        0 0 20px #00f0ff,
+        0 0 40px #00f0ff;
+}
+
+/* EFECTO HOVER */
+.logo-institucion img:hover{
+    transform: scale(1.05);
+    box-shadow:
+        0 0 20px #00f0ff,
+        0 0 40px #00f0ff,
+        0 0 80px #00f0ff,
+        0 0 120px #00f0ff;
+}
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+.doc{
+    background: #0d1a4d;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px #00f0ff;
+    transition: 0.3s;
+    height: 320px;
+    overflow: hidden;
+}
+
+.doc iframe{
+   
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+}
+
+.doc p{
+    
+    color: #00f0ff;
+    font-weight: bold;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+
+/* HOVER PRO */
+.doc:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+}     
+body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            background: #0a0f2c;
+            color: white;
+        }
+
+        /* MENÚ */
+        .sidebar{
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 230px;
+            height: 100%;
+            background: #060b23;
+            box-shadow: 0 0 20px #00f0ff;
+            padding-top: 20px;
+        }
+
+        .sidebar h2{
+            text-align: center;
+            color: #00f0ff;
+            text-shadow: 0 0 10px #00f0ff;
+        }
+
+        .sidebar a{
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #111;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover{
+            background: #00f0ff;
+            color: black;
+            box-shadow: 0 0 10px #00f0ff;
+        }
+
+        /* CONTENIDO */
+        .contenido{
+            margin-left: 230px;
+            padding: 20px;
+        }
+
+        .titulo{
+            text-align: center;
+            font-size: 40px;
+            color: #00f0ff;
+            text-shadow: 0 0 20px #00f0ff;
+        }
+
+        .card{
+            background: #111a40;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00f0ff;
+        }
+
+        h3{
+            color: #00f0ff;
+        }
+
+        iframe{
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        /* FOTO PERFIL */
+        .perfil{
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .perfil img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #00f0ff;
+            box-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff;
+            transition: 0.3s;
+        }
+
+        .perfil img:hover{
+            transform: scale(1.1);
+            box-shadow: 0 0 25px #00f0ff, 0 0 50px #00f0ff;
+        }
+
+        /* SKILLS */
+        .skills{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .skill{
+            background: #0d1a4d;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px #00f0ff;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .skill:hover{
+            transform: scale(1.05);
+            background: #00f0ff;
+            color: black;
+            box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+        }
+        /* IMÁGENES */
+.doc img, .item img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* CARRUSEL */
+.carrusel{
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.carrusel-contenido{
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+}
+
+.item{
+    min-width: 250px;
+    max-width: 250px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.item p{
+    color:#00f0ff;
+    margin-top:10px;
+}
+/* IMÁGENES */
+.item img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* BOTONES */
+.prev, .next{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    background:#00f0ff;
+    border:none;
+    padding:10px;
+    cursor:pointer;
+    font-size:20px;
+}
+
+.prev{ left:10px; }
+.next{ right:10px; }
+
+        @media(max-width:768px){
+            .sidebar{
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .contenido{
+                margin-left: 0;
+            }
+        }
+
+.visor{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.visor img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+    box-shadow:0 0 30px #00f0ff;
+}
+
+.doc img{
+    cursor:pointer;
+}
+
+
+
+@keyframes zoom{
+    from{transform:scale(0.7);}
+    to{transform:scale(1);}
+}
+        /* RESPONSIVO */
+@media(max-width:768px){
+    .galeria{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 1024px){
+
+    .galeria{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item{
+        min-width: 220px;
+        max-width: 220px;
+    }
+
+    .titulo{
+        font-size: 26px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 768px){
+ .sidebar{
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+     .sidebar h2{
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+   .sidebar a{
+        width: 90%;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* MENU LATERAL */
+    .menu{
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a{
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* CONTENIDO */
+   .contenido{
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    /* TITULOS */
+    .titulo{
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .subtitulo{
+        font-size: 18px;
+    }
+
+    /* GALERÍA */
+    .galeria{
+        grid-template-columns: 1fr;
+    }
+
+    /* CARRUSEL */
+    .item{
+        min-width: 200px;
+        max-width: 200px;
+    }
+
+    .item img{
+        height: 150px;
+    }
+
+    /* BOTONES */
+    .prev, .next{
+        padding: 6px;
+        font-size: 14px;
+    }
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+.card{
+    width: 100%;
+    box-sizing: border-box;
+}
+@media (max-width: 1024px){
+
+    .galeria{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item{
+        min-width: 220px;
+        max-width: 220px;
+    }
+
+    .titulo{
+        font-size: 26px;
+    }
+}
+@media (max-width: 1024px){
+
+    .galeria{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item{
+        min-width: 220px;
+        max-width: 220px;
+    }
+
+    .titulo{
+        font-size: 26px;
+    }
+}
+/* CELULARES PEQUEÑOS */
+@media (max-width: 480px){
+
+    .titulo{
+        font-size: 18px;
+    }
+
+    .subtitulo{
+        font-size: 16px;
+    }
+
+    .item{
+        min-width: 180px;
+        max-width: 180px;
+    }
+
+    .item img{
+        height: 130px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- MENÚ -->
+    <div class="sidebar">
+        <h2>Portafolio</h2>
+        <a href="#portada">Portada</a>
+        <a href="#profesional">Carpeta Profesional</a>
+        <a href="#institucional">Carpeta Institucional</a>
+        <a href="#pedagogica">Carpeta Pedagógica</a>
+        <a href="#planificacion">Planificación</a>
+        <a href="#anexos">Anexos</a>
+    </div>
+
+   <!-- CONTENIDO -->
+    <div class="contenido">
+
+        <!-- PORTADA -->
+        <div id="portada" class="card">
+
+            <h1 class="titulo">PORTAFOLIO DOCENTE</h1>
+            <div class="perfil-grande">
+            <img src="/imagenes/imagen1.jpeg" alt="Foto docente">
+            </div>
+
+            <h2 style="text-align:center; color:#00f0ff;">
+                Ing. Hector Arturo Ramos Turcios
+            </h2>
+
+            <p style="text-align:center;">
+                Docente del área de Informática | Innovación Educativa | Tecnología Aplicada
+            </p>
+
+            <hr style="border:1px solid #00f0ff;">
+
+           <h3>👨‍🏫 Presentación Profesional</h3>
+<p>
+Soy un profesional comprometido con la educación, especializado en el área de informática, orientado al desarrollo de competencias tecnológicas en los estudiantes. Promuevo el pensamiento crítico, la resolución de problemas y el uso adecuado de herramientas digitales en el entorno educativo.
+</p>
+
+<p>
+A lo largo de mi labor docente, he implementado estrategias innovadoras apoyadas en plataformas digitales, metodologías activas y recursos tecnológicos que fortalecen el aprendizaje significativo y la participación de los estudiantes.
+</p>
+
+<h3>🎯 Filosofía Educativa</h3>
+<p>
+Mi enfoque pedagógico se basa en el aprendizaje activo, donde el estudiante es el protagonista de su propio proceso formativo. Me caracterizo por aplicar un método práctico de enseñanza, permitiendo que los estudiantes aprendan haciendo, experimentando y desarrollando habilidades reales.
+</p>
+
+<p>
+Asimismo, procuro explicar siempre el porqué y el cómo de cada técnica o contenido, con el objetivo de que los alumnos no solo memoricen, sino que comprendan y sepan aplicar los conocimientos en situaciones reales. Fomento un ambiente inclusivo, motivador y adaptado a las necesidades individuales de cada estudiante.
+</p>
+            <!-- SKILLS PRO -->
+            <h3>💻 Competencias Profesionales</h3>
+
+            <div class="skills">
+
+                <div class="skill">👨‍💻 HTML & CSS</div>
+                <div class="skill">⚡ JavaScript (Básico)</div>
+                <div class="skill">🧠 Lógica de Programación</div>
+                <div class="skill">📊 Google Workspace</div>
+                <div class="skill">🎨 Canva & Gamma</div>
+                <div class="skill">🖥️ Soporte Técnico</div>
+                <div class="skill">🚀 Innovación Educativa</div>
+
+            </div>
+
+            <h3>🚀 Objetivo Profesional</h3>
+            <p>
+                Continuar integrando tecnología en el aula y formar estudiantes con habilidades digitales,
+                pensamiento crítico y preparación para el mundo actual.
+            </p>
+
+        </div>
+
+
+   
+
+<!-- ================= PROFESIONAL ================= -->
+<div id="profesional" class="card">
+    <h1 class="titulo">📁 CARPETA PROFESIONAL</h1>
+
+    <div class="galeria">
+
+        <div class="doc">
+            <iframe src="https://drive.google.com/file/d/1S5fPP7babMazTjD7vncPsWA0ZvUPGWWt/preview"></iframe>
+            <p>🎓 Copia de Títulos</p>
+        </div>
+
+        <div class="doc">
+            <iframe src="https://drive.google.com/file/d/1w3UH_LUgXEqvJwAXBTPXyAcyY9hWwP7V/preview"></iframe>
+            <p>🪪 Documentos Personales</p>
+        </div>
+
+        <div class="doc">
+            <iframe src="https://drive.google.com/file/d/1Y2pkK3opdeZAeOlnVILuOji5x6MCapcW/preview"></iframe>
+            <p>📄 Hoja de Vida</p>
+        </div>
+
+        <div class="doc">
+            <iframe src="https://drive.google.com/file/d/1oT8QxA-1XPZ_pp4p-kyzrNRBiOJFujK4/preview"></iframe>
+            <p>🎓 Cursos</p>
+        </div>
+
+        <div class="doc">
+            <iframe src="https://drive.google.com/file/d/1gVIZsWKm6tV5la-o9iu-MqjNNvylsECH/preview"></iframe>
+            <p>📊 FODA</p>
+        </div>
+
+        <div class="doc">
+            <iframe src="https://drive.google.com/file/d/14C8B5M03rEM5wIDz1hToYPmOrRjc5knE/preview"></iframe>
+            <p>📘 Filosofía</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- ================= INSTITUCIONAL ================= -->
+<div id="institucional" class="card">
+
+    <h1 class="titulo">
+        CENTRO EDUCATIVO NO GUBERNAMENTAL <br>
+        INSTITUTO TECNOLÓGICO SAMPEDRANO
+    </h1>
+
+    <div class="logo-institucion">
+        <img src="imagenes/logo.jpeg">
+    </div>
+
+    <div class="galeria">
+
+        <div class="doc">
+            <iframe src="https://drive.google.com/file/d/1fkVf9HYqPr1IBaQRDG0vyds619fFtUKL/preview"></iframe>
+            <p>🏢 Organigrama</p>
+        </div>
+
+        <div class="doc">
+            <iframe src="https://drive.google.com/file/d/1Dg2puvySB92MO78FkZKN4iloWtnMXm8i/preview"></iframe>
+            <p>📅 Calendario</p>
+        </div>
+
+        <div class="doc">
+           <iframe src="https://drive.google.com/file/d/1VhxN3t9nhMHoDcZijXTANgesSwj2Bsvm/preview"></iframe>
+           <p>🎯 Misión</p>
+       </div>
+       <div class="doc">
+           <iframe src="https://drive.google.com/file/d/1Cv3sHeGOqvGf71YZ-cOmd-L1WQWfVlEl/preview"></iframe>
+           <p>🎯 Visión</p>
+       </div>
+
+
+    </div>
+
+</div>
+
+<!-- ================= PEDAGÓGICA ================= -->
+<div id="pedagogica" class="card">
+
+    <h1 class="titulo">📘 CARPETA PEDAGÓGICA</h1>
+
+    <div class="galeria">
+
+        <div class="doc">
+    <iframe src="https://drive.google.com/file/d/1txcpdtfKTyYcKBKvCv8BN8ofaEFiHGec/preview"></iframe>
+    <p>🗓️ Horario de Clases</p>
+</div>
+        <div class="doc">
+    <iframe src="https://drive.google.com/file/d/1Dt9XA5Z2nwsU5gPAbpTUvWdcaoGSs0Wi/preview"></iframe>
+    <p>👨‍🎓 Listado de Alumnos SACE</p>
+</div>
+        <div class="doc">
+    <iframe src="https://drive.google.com/file/d/1Cly7bHGTr9StyR4wvIOdBzsNoE-3BOL5/preview"></iframe>
+    <p>📋 Asistencia Diaria</p>
+</div>
+
+        <div class="doc">
+    <iframe src="https://drive.google.com/file/d/1Et41NnDgvOZQPiTF1JHaGrwy6J5Ux-PS/preview"></iframe>
+    <p>🏫 Gobierno Estudiantil y Horario de Aseo</p>
+</div>
+        <div class="doc vacio"><p>📄 APF</p></div>
+        <div class="doc">
+    <iframe src="https://drive.google.com/file/d/1-7onjE8asTUL5R5XUI8G6RwIFnLm21L3/preview"></iframe>
+    <p>📊 POA (Plan Operativo Anual)</p>
+</div>
+
+    </div>
+
+</div>
+<div id="planificacion" class="card">
+
+    <h1 class="titulo">📂 PLANIFICACIÓN</h1>
+
+    <!-- ================= JORNALIZACIÓN ================= -->
+    <div class="bloque">
+        <h2 class="subtitulo">JORNALIZACIÓN ANUAL</h2>
+
+        <div class="galeria">
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1rsO4IYdz8qxuiD7FgMlQTlFM-fhrJCpY/preview"></iframe><p>Séptimo-Computacion</p></div>
+            <div class="doc"> <iframe src="https://drive.google.com/file/d/1GhfkoskAWRom6TyLMxcL54fdEUG38_H1/preview"></iframe><p>Octavo-Computacion</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1ZDEe8Sg_FeAgTVb1kzb6GNcuhyOCVV8m/preview"></iframe><p>Noveno-Computacion</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1CE1dFO6keT6PIiNjvFg6WeQXoYNbb90m/preview"></iframe><p>BTP Informatica-informatica</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1j67BLKv42YgV4HOmQSMDcrT0qaDBwlEv/preview"></iframe><p>BTP Finanzas y administracion y turismo-informatica</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/10x7jZRLkEbsEqLKGX1zo2Ug_sPiR2UCP/preview"></iframe><p>BCH-informatica</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1gx3Axc_rydMoIWKvzZWIjC8aYMIEkt00/preview"></iframe><p>II BCH-TIC</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1rWL2aAoGVwHp_WL4HZ88DSEZjFzUuaVe/preview"></iframe><p>II INFORMATICA-Analisis y diseño</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1wd2nu1VfZNoPME7Yiq41vfE3nVIrQy-a/preview"></iframe><p>II INFORMATICA-Ofimatica</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/19oVicpXVbEyA7gO6MU4n_IsWXBJK71Gb/preview"></iframe><p>II INFORMATICA-Laboratorio de informatica</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1KriJKi-7w7PqaB9yQjkZKq9ndgsFU8US/preview"></iframe><p>II INFORMATICA-Informatica Aplicada</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1KV7rSThZ05ysR_rr7PpYKct9NKywvdrW/preview"></iframe><p>II CONTADURIA Y FINANZAS Y ADMINISTRACION DE EMPRESAS-INFORMATICA EMPRESARIAL</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1Ul4RCWDFEnx_c0qrbdfQgySFmhdnyXV-/preview"></iframe><p>III INFORMATICA-MANTENIMIENTO</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1oJZJ4S5GJGmstTYE4Ce3OcKn3ziF8sPs/preview"></iframe><p>III INFORMATICA-REDES</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1bch_kmdDKST4SRugIwATMY5cuAUVxyMC/preview"></iframe><p>III TURISMO-INFORMATICA EMPRESARIAL</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1UJ96uxGKyDSlGqwKnX3RZLmDhPixGtZY/preview"></iframe><p>III CONTADURIA Y FINANZAS Y ADMINISTRACION DE EMPRESAS - INFORMATICA EMPRESARIAL</p></div>
+        </div>
+    </div>
+    <div class="bloque">
+        <h2 class="subtitulo">JORNALIZACIÓN ANUAL ESCUELA</h2>
+
+        <div class="galeria">
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1G6IA9MHudSv7NhjI81YNuYZKaSU0N2S7/preview"></iframe><p>Third grade-Computacion</p></div>
+            <div class="doc"> <iframe src="https://drive.google.com/file/d/1NeaZJvB_EyXYZtXOxEuAcHojCn1jlbe_/preview"></iframe><p>Fourth grade-Computacion</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1yOb0WaFN58AcGvLE6rTNr7qNBcFQ3DKe/preview"></iframe><p>fifth grade-Computacion</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1iUUBmOUBUN2SRTMHefF7khHHmlIxyb_u/preview"></iframe><p>sixth grade-computacion</p></div>
+            
+        </div>
+    </div>
+
+    <!-- ================= PLANES I PARCIAL ================= -->
+    <div class="bloque">
+        <h2 class="subtitulo">PLANES SEMANALES POR PARCIAL</h2>
+
+        <div class="galeria">
+            <div class="doc"><iframe src="https://drive.google.com/file/d/16FkrtlLDM-reigYq3SQMFkfb6JwcYun3/preview"></iframe><p>I PARCIAL</p></div>
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1W1VOVAJeJe7EMeeeHpQEiyD00AfiePn2/preview"></iframe><p>II PARCIAL</p></div>
+        </div>
+    </div>
+
+    <!-- ================= ACUMULADOS ================= -->
+    <div class="bloque">
+        <h2 class="subtitulo">PROGRAMACIÓN DE ACUMULADOS</h2>
+
+        <div class="galeria">
+            <div class="doc"><iframe src="https://drive.google.com/file/d/1o0SG_VdJB_9MuxVVfcJ54usD-WaKJopX/preview"></iframe><p>Syllabus 2 Parcial</p></div>
+        </div>
+    </div>
+
+
+</div>
+<div id="anexos" class="card">
+
+    <h1 class="titulo">📎 ANEXOS</h1>
+
+    <!-- ================= ELECTRICIDAD ================= -->
+    <div class="bloque">
+        <h2 class="subtitulo">⚡ Taller de Electricidad</h2>
+
+        <div class="galeria">
+            <div class="doc">
+                <iframe src="AQUI_VIDEO1"></iframe>
+                <p>🔌 Práctica eléctrica</p>
+            </div>
+
+            <div class="doc">
+                <iframe src="AQUI_VIDEO2"></iframe>
+                <p>💡 Circuitos</p>
+            </div>
+
+            <div class="doc vacio">
+                <p>📹 Más evidencias</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= II BCH ================= -->
+    <div class="bloque">
+        <h2 class="subtitulo">🖥️ II BCH -TIC</h2>
+
+       <div class="galeria">
+    <div class="doc">
+        <img src="imagenes/BCH1.jpeg" onclick="abrirImagen(this.src)">
+        <p>BCH TINKERCARD</p>
+    </div>
+
+    <div class="doc">
+        <img src="imagenes/BCH2.jpeg" onclick="abrirImagen(this.src)">
+        <p>BCH ARDUINO VIRTUAL</p>
+    </div>
+</div>
+    </div>
+     <div class="bloque">
+    <h2 class="subtitulo">🤖 Séptimo - Robótica</h2>
+
+    <div class="galeria">
+
+        <div class="doc">
+            <img src="imagenes/SEPTIMO2.jpeg" onclick="abrirImagen(this.src)">
+            <p>🤖 Enseñanza de robot mblock</p>
+        </div>
+
+        <div class="doc">
+            <img src="imagenes/SEPTIMO1.jpeg" onclick="abrirImagen(this.src)">
+            <p>🔌 Demostracion de robots</p>
+        </div>
+
+    </div>
+</div>
+
+    <div class="bloque">
+    <h2 class="subtitulo">💻 III INFORMÁTICA - MANTENIMIENTO</h2>
+
+    <div class="carrusel">
+
+        <!-- BOTÓN IZQUIERDA -->
+        <button class="prev" onclick="moverCarruselMantenimiento(-1)">❮</button>
+
+        <!-- CONTENIDO -->
+        <div class="carrusel-contenido" id="carruselMantenimiento">
+
+            <div class="item"><img src="imagenes/INFO3-1.jpeg" onclick="abrirImagen(this.src)"><p>🛠️ Mantenimiento</p></div>
+            <div class="item"><img src="imagenes/INFO3-2.jpeg" onclick="abrirImagen(this.src)"><p>🔧 Limpieza</p></div>
+            <div class="item"><img src="imagenes/INFO3-3.jpeg" onclick="abrirImagen(this.src)"><p>💻 Diagnóstico</p></div>
+            <div class="item"><img src="imagenes/INFO3-4.jpeg" onclick="abrirImagen(this.src)"><p>⚙️ Componentes</p></div>
+            <div class="item"><img src="imagenes/INFO3-5.jpeg" onclick="abrirImagen(this.src)"><p>🔌 Conexión</p></div>
+            <div class="item"><img src="imagenes/INFO3-6.jpeg" onclick="abrirImagen(this.src)"><p>🧰 Herramientas</p></div>
+            <div class="item"><img src="imagenes/INFO3-7.jpeg" onclick="abrirImagen(this.src)"><p>💽 Instalación</p></div>
+            <div class="item"><img src="imagenes/INFO3-8.jpeg" onclick="abrirImagen(this.src)"><p>🖥️ Ensamblaje</p></div>
+            <div class="item"><img src="imagenes/INFO3-9.jpeg" onclick="abrirImagen(this.src)"><p>🔍 Evaluación</p></div>
+
+        </div>
+
+        <!-- BOTÓN DERECHA -->
+        <button class="next" onclick="moverCarruselMantenimiento(1)">❯</button>
+
+    </div>
+</div>
+
+<!-- ================= JS COMPLETO ================= -->
+<script>
+
+/* 🔥 CARRUSEL MANTENIMIENTO */
+let posicion = 0;
+
+function moverCarruselMantenimiento(direccion){
+    const carrusel = document.getElementById("carruselMantenimiento");
+    const total = carrusel.children.length;
+
+    posicion += direccion;
+
+    /* 🔥 EFECTO INFINITO */
+    if(posicion < 0) posicion = total - 3;
+    if(posicion > total - 3) posicion = 0;
+
+    carrusel.style.transform = `translateX(-${posicion * 270}px)`;
+}
+
+/* 🔥 VISOR DE IMÁGENES */
+function abrirImagen(src){
+    document.getElementById("visorImagen").style.display = "flex";
+    document.getElementById("imagenGrande").src = src;
+}
+
+function cerrarImagen(){
+    document.getElementById("visorImagen").style.display = "none";
+}
+
+</script>
+
+<!-- ================= VISOR ================= -->
+<div id="visorImagen" class="visor" onclick="cerrarImagen()">
+    <img id="imagenGrande">
+</div>
+</body>
+</html>
